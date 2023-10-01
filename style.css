@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+    body{
+        margin: 0;
+        font-family: 'Lobster', cursive;
+        /* background-color: #010001; */
+        color: #fff;
+        background-image: url(pics/image0.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .container-fuild{
+        height: 100vh;
+        overflow-x: hidden;
+        perspective: 20px;
+    }
+    .banner{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transform-style: preserve-3d;
+    }
+    .bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(pics/ty\ car.jpeg);
+        background-size: cover;
+        background-position: center;
+        transform: translateZ(-10px) scale(1.);
+    }
+    .bg::before{
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        content: '';
+        background-image: linear-gradient(
+            to top, #010001, transparent
+        );
+        bottom: 0;
+    }
+    .content{
+        font-size: xxx-large;
+        transform: translateZ(10px)
+    }
+    .container{
+        width: 1200px;
+        max-width: 98%;
+        margin: auto;
+        padding-bottom: 100px;
+    }
+    header{
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 1200px;
+        max-width: 100%;
+        padding: 40px 0;
+    }
+    header .logo{
+        font-size: xx-large;
+    }
+    header .inquiry{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin: 10px;
+    }
+
+    header button{
+        background-color: #21c7c7;
+        color: #fff;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    header button:hover{
+        opacity: 30%;
+        cursor: pointer;
+    }
+    nav ul{
+        list-style: none;
+        display: flex;
+        justify-content: end;
+    }
+    nav ul li{
+        padding: 10px;
+    }
+    .library{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 100px);
+        margin-top: 100px;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+    .library .item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(pics/ty\ car\ 2.jpeg);
+        background-size: cover;
+        transition: 0.5s;
+        opacity: 0;
+        transition-delay: 0.3s;
+    }
+    .library .item:nth-child(2){
+        background-image: url(pics/Twitch\ Panel\ Discord.png);
+        transition-delay: 0.5s;
+    }
+    .library .item:nth-child(3){
+        background-image: url(pics/image0.jpg);
+        transition-delay: 0.7s;
+    }
+    .library .item:nth-child(4){
+        background-image: url(pics/image0.jpg);
+        transition-delay: 0.9s;
+    }
+    /* .library .item:nth-child(5){
+        font-size: xxx-large;
+        transform: translateZ(10px);
+        text-align: center;
+        height: 15vh;
+        max-width: 100%;
+        background-image: none;
+        transition-delay: .12s;
+    } */
+    .photoSlides{
+        width: 500%;
+        text-align: center;
+        margin: 0;
+        transition: 0.9s;
+        transform: translateY(30px);
+        opacity: 0;
+        font-size: large;
+        font-family: 'Times New Roman', serif, normal;
+    }
+    .library.active .item{
+        opacity: 1;
+    }
+    .photoSlides.active{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    a {
+        text-decoration: none;
+        color: inherit
+    }
+    .h2 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+        font-size: xxx-large;
+        transform: translateZ(10px);
+        margin: 0;
+        max-width: 100%;
+    }
+
+
+
+
+
+
+
+
+
+    /* CSS for the scrolling pics!*/
+
+    .slider{
+        width: 1200px;
+        max-width: 98vw;
+        height: 700px;
+        margin: center;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        border-radius: 10%;
+    }
+    .slider .list{
+        position: absolute;
+        width: max-content;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        transition: 1s;
+    }
+    .slider .list img{
+        width: 1200px;
+        max-width: 100vw;
+        height: 100%;
+        object-fit: cover;
+    }
+    .slider .buttons{
+        position: absolute;
+        top: 45%;
+        left: 5%;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .slider .buttons button{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff5;
+        color: #fff;
+        border: none;
+        font-family: monospace;
+        font-weight: bold;
+    }
+    .slider .dots{
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        color: #fff;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .slider .dots li{
+        list-style: none;
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        margin: 10px;
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+    .slider .dots li.active{
+        width: 30px;
+    }
+    @media screen and (max-width: 500px){
+        .slider{
+            height: 400px;
+            max-width: 98vw;
+        }
+
+        .content{
+            font-size: xx-large;
+            transform: translateZ(10px);
+            max-width: 50%;
+            margin: auto;
+            padding-bottom: 50px;
+        }
+        .container{
+            width: 575px;
+            max-width: 98%;
+            margin: auto;
+            padding-bottom: 100px;
+        }
+        header{
+            position: absolute;
+            top: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 1200px;
+            max-width: 100%;
+            padding: 40px 0;
+        }
+        header .inquiry .logo .butto{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 250px;
+            position: end;
+            left: 155px;
+            top: 30%;
+        }
+    }

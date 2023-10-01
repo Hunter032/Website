@@ -1,0 +1,80 @@
+
+* {
+    background-color: #333;
+}
+body, h1, h2, p {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Lobster', cursive;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+
+#about, #services, #contact {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#contact-form label {
+    display: block;
+    margin-top: 1px;
+    margin-bottom: 5px;
+}
+
+
+#contact-form input,
+#contact-form textarea {
+    background-color: white;
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    background-color: #21c7c7;
+    border-radius: 15px;
+    border-color: black;
+    font-size: 22px;
+    padding: 10px 18px;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    margin-top: -20px;
+}
+
+button:hover {
+    opacity: 30%;
+    cursor: pointer;
+}
+
+button {
+    background-color: #eff0ec;
+    border-radius: 15px;
+    border-color: black;
+    font-size: 22px;
+    padding: 5px 8px;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    margin-top: -20px;
+    text-decoration: none;
+    color: inherit
+
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
