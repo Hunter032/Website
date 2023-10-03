@@ -4,7 +4,7 @@
         font-family: 'Lobster', cursive;
         /* background-color: #010001; */
         color: #fff;
-        background-image: url(pics/image0.jpg);
+        background-image: url(pics/DSC01437-1200x800.jpg);
         background-size: cover;
         background-position: center;
     }
@@ -70,7 +70,7 @@
     }
 
     header button{
-        background-color: #21c7c7;
+        background-color: #2c8610;
         color: #fff;
         padding: 10px 15px;
         cursor: pointer;
@@ -100,18 +100,20 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url(pics/ty\ car\ 2.jpeg);
+        background-image: url(pics/What\ Is\ A\ JDM\ Car.webp);
         background-size: cover;
+        background-position: center;
         transition: 0.5s;
         opacity: 0;
         transition-delay: 0.3s;
+        font-size: xx-large;
     }
     .library .item:nth-child(2){
-        background-image: url(pics/Twitch\ Panel\ Discord.png);
+        background-image: url(pics/DSC01437-1200x800.jpg);
         transition-delay: 0.5s;
     }
     .library .item:nth-child(3){
-        background-image: url(pics/image0.jpg);
+        background-image: url(pics/2016-bmw-i8-review.webp);
         transition-delay: 0.7s;
     }
     .library .item:nth-child(4){
@@ -213,6 +215,10 @@
         font-family: monospace;
         font-weight: bold;
     }
+    .slider .buttons button:hover{
+        opacity: 30px;
+        cursor: pointer;
+    }
     .slider .dots{
         position: absolute;
         bottom: 10px;
@@ -232,6 +238,9 @@
         margin: 10px;
         border-radius: 20px;
         transition: 0.5s;
+    }
+    .slider .dots li:hover{
+        cursor: pointer;
     }
     .slider .dots li.active{
         width: 30px;
@@ -274,3 +283,10 @@
             top: 30%;
         }
     }
+
+@media screen and (max-width: 350px){
+        .content{
+            font-size: x-large;
+            transform: translateZ(10px)
+        }
+}
